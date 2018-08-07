@@ -36,3 +36,5 @@ bikecounts %>%
   # then average by month over years for each bridge
   group_by(name, month(ym)) %>% 
   summarize(avg_monthly_counts=mean(total_monthly_counts))
+
+# This is a comment.
