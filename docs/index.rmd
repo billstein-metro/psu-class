@@ -28,7 +28,7 @@ source("plot1.R")
 count_plot
 ```
 
-We proved in class that bicycle use is highest when a day's minimum temperateure is between freezing at 65F.
+We proved in class that bicycle use is highest when a day's minimum temperature is between freezing and 65F.
 
 ```{r plot2, echo=FALSE, message=FALSE}
 source("plot2.R")
@@ -38,3 +38,8 @@ tmin_plot
 
 I started to test whether there's also a relationship between bike counts and a day's minutes of sunlight. I plan to complete this test outside of class. Here's a snapshot of the data.
 
+```{r table2, echo=FALSE, message=FALSE}
+source("table2.R")
+
+sunlight[1:10,]
+```
