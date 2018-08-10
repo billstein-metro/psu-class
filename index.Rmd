@@ -9,7 +9,23 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## Bike Counts on Portland Bridges
+
+In PSU's Data Science class for August 2018, we were supplied a dataset of daily bicycle counts on select bridges across the Willamette River in Portland, Oregon. 
+
+```{r table1, echo=FALSE, message=FALSE}
+source("table1.R")
+
+outpu_df
+```
+
+The counts were distributed as viewed in this graph.
+
+```{r plot1, echo=FALSE, message=FALSE}
+source("plot1.R")
+
+count_plot
+```
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
