@@ -1,9 +1,11 @@
 library(readxl)
 library(dplyr)
 
+input_file <- "data/Hawthorne Tilikum Steel daily bike counts 073118.xlsx"
 load_data <- function (input_file, bridge_name) {
   bikecounts <- read_excel(input_file, sheet=bridge_name, skip=1)
   bikecounts$name <- bridge_name
+  bikecounts
 }
 
 Tilikum <- load_data(input_file, "Tilikum")
@@ -12,10 +14,7 @@ Hawthorne <- load_data(input_file, "Hawthorne")
 # use the column names of Tilikum for Hawthorne
 names(Hawthorne) <- names(Tilikum)
 
-Steel <- load_data(input_file,library("tidycensus")
-library("tidycensus")
-census_api_key("965406a004cd2982d5b859a6f134584d5cea0a63", install=TRUE)
- "Steel")
+Steel <- load_data(input_file, "Steel")
 names(Steel) <- c("date", "lower", "westbound", "eastbound", "total", "name")
 
 # combine all three data frame for all three bridges
